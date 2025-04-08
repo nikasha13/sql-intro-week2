@@ -15,7 +15,9 @@
 -- | 2019 | Houston Astros                | 107       |
 -- | 2004 | St. Louis Cardinals           | 105       |
 
-SELECT year, name, max(wins) FROM teams
+SELECT year, max(wins) FROM teams
 WHERE year >=1960
 GROUP BY year
 ORDER BY max(wins) DESC;
+
+-- remove "name" because gives innaccurate names - what if multiple teams h ad 116 wins in 2001? 
